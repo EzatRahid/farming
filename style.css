@@ -24,7 +24,7 @@ li{
 
 
 main{
-    height: calc(100vh- 50.5px);
+    height: calc(100vh - 50.5px);
     display: flex;
     justify-content: center;
     align-items: center;
