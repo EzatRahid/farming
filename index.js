@@ -7,18 +7,18 @@ btn.addEventListener('click', () =>{
     counterEle+=1
     console.log('clicked')
 
-    const timerFunc = () =>{
-        timer.innerHTML = `${timerEle} seconds have passed`
-    
-        timerEle++
-    
-    
-    }
-    
-    const yes = setInterval(timerFunc,1000)
 })
 
 let timer = document.getElementById("timer")
-timerEle = 0;
+timerEle = 0.00;
 
+const timerFunc = () =>{
+    timer.innerHTML = `${timerEle} seconds have passed`
+
+    timerEle++
+
+
+}
+
+const yes = setInterval(timerFunc,1000)
 
