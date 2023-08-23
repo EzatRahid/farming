@@ -4,22 +4,21 @@ let counterEle = 0;
 
 btn.addEventListener('click', () =>{
     counter.innerHTML = counterEle
-    counterEle+=2
+    counterEle+=1
     console.log('clicked')
 
+    const timerFunc = () =>{
+        timer.innerHTML = `${timerEle} seconds have passed`
+    
+        timerEle++
+    
+    
+    }
+    
+    const yes = setInterval(timerFunc,1000)
 })
 
-const timerOutput = document.getElementById('timer');
-let seconds = 0;
+let timer = document.getElementById("timer")
+timerEle = 0;
 
-function updateTimer() {
-    timerOutput.textContent = seconds + ' seconds';
-    seconds++;
-}
 
-function startTimer() {
-    updateTimer();
-    setTimeout(startTimer, 1000); // Call startTimer again after 1000ms (1 second)
-}
-
-startTimer();
