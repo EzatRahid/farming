@@ -12,13 +12,31 @@ btn.addEventListener('click', () =>{
 let timer = document.getElementById("timer")
 timerEle = 0.00;
 
-const timerFunc = () =>{
-    timer.innerHTML = `${timerEle} seconds have passed`
+let start = document.getElementById('start')
+let stop = document.getElementById('stop')
 
-    timerEle++
+start.addEventListener('click', () =>{
+
+    const timerFunc = () =>{
+        timer.innerHTML = `${timerEle} seconds have passed`
+    
+        timerEle++
+    
+        if(timerEle === 10){
+            timer.innerHTML = `YOUR A FAGGOT NIGGA`
+        }
+    
+    
+    }
+    const yes = setInterval(timerFunc,1000)
+})
+
+stop.addEventListener('click', () =>{
+
+    clearInterval(timerFunc)
 
 
-}
+})
 
-const yes = setInterval(timerFunc,1000)
+
 
