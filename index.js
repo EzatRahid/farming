@@ -15,19 +15,19 @@ timerEle = 0.00;
 let start = document.getElementById('start')
 let stop = document.getElementById('stop')
 
+const timerFunc = () =>{
+    timer.innerHTML = `${timerEle} seconds have passed`
+
+    timerEle++
+
+    if(timerEle === 10){
+        timer.innerHTML = `YOUR A FAGGOT NIGGA`
+    }
+
+
+}
 start.addEventListener('click', () =>{
 
-    const timerFunc = () =>{
-        timer.innerHTML = `${timerEle} seconds have passed`
-    
-        timerEle++
-    
-        if(timerEle === 10){
-            timer.innerHTML = `YOUR A FAGGOT NIGGA`
-        }
-    
-    
-    }
     const yes = setInterval(timerFunc,1000)
 })
 
